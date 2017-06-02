@@ -30,10 +30,10 @@ applicationId "com.yourname.themename"
   * In the top right corner you will see a little "gear icon". 
   * Click on it.
   * in the dialog which opens click on "Compact Empty Middle Packages".
-  * Select the "substratum folder" (in JAVA/com/ and rightclick it. 
+  * Select the "substratum" folder (in JAVA/com/ and rightclick it. 
   * Choose "refactor" and then "rename".
   * A warning window will pop up. Just click on "Rename package".
-  * Enter the desired first part of your package name(should be same as that in applicationId of bild.gradle) and click refactor.
+  * Enter the desired first part of your package name(should be same as that in applicationId of build.gradle) and click refactor.
   * At the bottom of the screen a refactoring preview will appear. Just click on "DO REFACTOR" at the left corner. <br/> <br/>
   * Do the same with the theme and template folders, name it same as the name in applicationId of build.gradle.
 ```
@@ -83,7 +83,7 @@ but you could use Google Drive (for the XML file). Pictures must be located in a
 ### Audio
 To install system sound effects, you will need to have an audio folder, just like it's listed here: https://github.com/TeamSubstratum/SubstratumThemeTemplate/tree/master/app/src/main/assets/audio
 
-You are allowed to add multiple audio files and name them differently so they show up differently on the spinner dropdown in the app.
+You are allowed to add multiple audio files and name them differently so they show up indivually on the spinner dropdown in the app.
 
 Example:
 ```
@@ -102,7 +102,7 @@ StarWarsLockUnlock.zip/notifications/notification.ogg(or mp3)
 ### Boot Animations
 To install boot animations, you will need to have a bootanimations folder, just like it's listed here: https://github.com/TeamSubstratum/SubstratumThemeTemplate/tree/master/app/src/main/assets/bootanimation
 
-You are allowed to add multiple bootanimations and name them differently so they show up differently on the spinner dropdown in the app.
+You are allowed to add multiple bootanimations and name them differently so they show up individually on the spinner dropdown in the app.
 
 Example:
 ```
@@ -113,7 +113,7 @@ assets/bootanimation/MarvelDC.zip
 ### Fonts
 To install fonts, you will need to have a fonts folder, just like it's listed here: https://github.com/TeamSubstratum/SubstratumThemeTemplate/tree/master/app/src/main/assets/fonts
 
-You are allowed to add multiple fonts and name them differently so they show up differently on the spinner dropdown in the app.
+You are allowed to add multiple fonts and name them differently so they show up individually on the spinner dropdown in the app.
 
 If you are looking to load up DOWNLOADED fonts from the internet, then download the ZIP from your source, extract it and navigate INTO the folder, until you find the folder "fonts" in "/system/fonts", and ZIP the whole contents of the folder up to form your new fonts pack.
 
@@ -146,6 +146,9 @@ type1 can be a/b/c, as type1(a/b/c).xml at the ROOT of your overlay, and it does
 
 An example of how to set up a Type 1 overlay:
 https://github.com/TeamSubstratum/SubstratumThemeTemplate/blob/master/app/src/main/assets/overlays/android/type1a_PINK.xml
+
+![Alt text](http://i.imgur.com/sobtTyK.png)
+To adjust these preview colors, ensure that your desired preview color (any name) is at the top of type1(a/b/c)_VARIANT-NAME.xml. This way you get the previews. For example in the link above this picture, the type1a example will display holo_blue_light's #C2185B. This value will work with ?android:attr attributes as well as @android:color/ colors, based on the current framework applied.
 
 #### Type 2 Overlays
 type2 is a FOLDER, and they must start with /assets/overlays/overlay_name/type2_FOLDERNAME/ and this is a base extension (means it is NOT dependent on framework). You can have nav bars here, headers, special icons, etc. Type2's show up as the FOURTH SPINNER, if all type1 spinners have been used.
